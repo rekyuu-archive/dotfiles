@@ -5,6 +5,7 @@
 .gnome/
 .gnupg/
 .local/
+.mpdscribble/
 .nv/
 .pki/
 .ssh/

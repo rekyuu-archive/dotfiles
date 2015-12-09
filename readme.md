@@ -1,3 +1,3 @@
-# Arch Linux .dotfiles
+# .dotfiles
 
 yaya

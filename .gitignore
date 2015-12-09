@@ -52,10 +52,13 @@ sfx/
 .config/pavucontrol.ini
 
 # Files
+.ncmpcpp/lyrics/
+.ncmpcpp/error.log
 .Xauthority
 .bash_history
 .bash_logout
 .esd_auth
 .fehbg
 .lesshst
+.gitconfig
 .xsel.log

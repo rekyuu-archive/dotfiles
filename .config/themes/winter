@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# winter theme
+
+# Fonts
+FONT_MAIN="Koruri"
+FONT_MAIN_SIZE="14"
+FONT_MONO="Hack"
+FONT_MONO_SIZE="11"
+
+# Black
+COLOR_30="#131619"
+COLOR_30_1="#131619"
+
+# Red
+COLOR_31="#505050"
+COLOR_31_1="#505050"
+
+# Green
+COLOR_32="#7c8888"
+COLOR_32_1="#7c8888"
+
+# Yellow
+COLOR_33="#9da7a6"
+COLOR_33_1="#9da7a6"
+
+# Blue
+COLOR_34="#22282c"
+COLOR_34_1="#22282c"
+
+# Magenta
+COLOR_35="#596567"
+COLOR_35_1="#596567"
+
+# Cyan
+COLOR_36="#a9bdc0"
+COLOR_36_1="#a9bdc0"
+
+# White
+COLOR_37="#c3cbca"
+COLOR_37_1="#c3cbca"
+
+# Background
+WALLPAPER="/home/bowan/img/wallpapers/winter.jpg"

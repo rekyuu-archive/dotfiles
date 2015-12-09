@@ -1,0 +1,60 @@
+# Folders
+.TelegramDesktop/
+.cache/
+.codeintel/
+.gnome/
+.gnupg/
+.local/
+.nv/
+.pki/
+.ssh/
+.thumbnails/
+build/
+dev/
+downloads/
+img/
+sfx/
+
+# ~/.config specific directories or folders
+.config/dconf/
+.config/gconf/
+.config/google-chrome/
+.config/google-chrome-unstable/
+.config/htop/
+.config/menus/
+.config/mpd/db
+.config/mpd/log
+.config/mpd/pid
+.config/mpd/state
+.config/mpd/sticker.sql
+.config/pulse/
+.config/pulseaudio-ctl/
+.config/spacefm/
+.config/sublime-text-3/Cache/
+.config/sublime-text-3/Index/
+.config/sublime-text-3/Installed Packages/
+.config/sublime-text-3/Local/
+.config/sublime-text-3/Packages/ElixirSublime/
+.config/sublime-text-3/Packages/SublimeCodeIntel/
+.config/sublime-text-3/Packages/SublimeLinter/
+.config/sublime-text-3/Packages/User/Color Highlighter/
+.config/sublime-text-3/Packages/User/Package Control.cache/
+.config/sublime-text-3/Packages/User/SublimeLinter/
+.config/sublime-text-3/Packages/User/Package Control.last-run
+.config/sublime-text-3/Packages/User/Package Control.merged-ca-bundle
+.config/sublime-text-3/Packages/User/Package Control.user-ca-bundle
+.config/sublime-text-3/Packages/bz2/
+.config/sublime-text-3/Packages/pygments/
+.config/sublime-text-3/Packages/pyyaml/
+.config/sublime-text-3/Packages/ssl-linux/
+.config/mimeapps.list
+.config/pavucontrol.ini
+
+# Files
+.Xauthority
+.bash_history
+.bash_logout
+.esd_auth
+.fehbg
+.lesshst
+.xsel.log

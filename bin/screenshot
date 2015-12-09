@@ -1,0 +1,48 @@
+#!/bin/bash
+
+# kyo.li uploader script
+#
+# requirements:
+#   maim
+#   slop
+#   jq
+#   xclip
+#   libnotify
+#
+# $ screenshot all
+#   for fullscreen
+#
+# $ screenshot region
+#   for region selection
+
+# Defines the URLs to make the POST
+URL="http://kyo.li"
+API="/api/upload"
+UPLOAD=$URL$API
+
+# Defines the folder and file names
+DIR=~/img/screenshots/$(date "+%Y-%m")
+FILENAME=$(date "+%Y-%m-%d_%H-%M-%S").png
+
+# Makes the directory if it doesn't exist
+mkdir -p $DIR
+FILEPATH=$DIR/$FILENAME
+
+# Runs maim depending on the script argument
+if [ "$1" == "all" ]; then
+	maim $FILEPATH
+elif [ "$1" == "region" ]; then
+	maim -s $FILEPATH -c 1,0,0,0.5
+fi
+
+paplay ~/sfx/smrpg_click.wav
+
+# Uploads the image and returns the url
+RESPONSE=$(curl -s -F file_0=@$FILEPATH -F filename=$FILENAME $UPLOAD)
+IMAGE=$(echo $RESPONSE | jq -r .urls[0])
+LINK=$URL$IMAGE
+
+# Copies the link to clipboard and notifies the user
+echo $LINK | xclip -selection c
+notify-send $LINK
+paplay ~/sfx/smrpg_item.wav

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# main theme file
+#
+# Rename the line below to the theme you'd like to use, located in
+# `~/.config/themes`.
+
+THEME="winter"
+
+# Pulls from the main theme file
+source ~/.config/themes/$THEME

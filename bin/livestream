@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# livestream
+#
+# launches mpv with the url on the clipboard
+
+STREAM=$(xclip -selection c -o)
+mpv $STREAM

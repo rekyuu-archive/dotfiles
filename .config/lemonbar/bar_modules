@@ -1,0 +1,51 @@
+#!/bin/bash
+
+source ~/.config/themerc
+
+Date()
+{
+	DATE=$(date "+%A, %B %d, %Y")
+	echo -n "$DATE"
+}
+
+Time()
+{
+	TIME=$(date "+%H:%M")
+	echo -n "$TIME"
+}
+
+Volume()
+{
+	VOLUME=$(echo `(pactl list sinks | grep "Volume: front-left: ")| awk '{print $5}'`)
+	MUTE=$(echo `(pactl list sinks | grep "Mute: ")| awk '{print $2}'`)
+
+	if [ "$MUTE" == "no" ]; then
+		echo $VOLUME
+	elif [ "$MUTE" == "yes" ]; then
+		echo "MUTE"
+	fi
+}
+
+ActiveWindow()
+{
+	TITLE=$(xdotool getwindowfocus getwindowname)
+
+	if [ -z "$TITLE" ]; then
+		echo "~"
+	elif [ -n "$TITLE" ]; then
+		echo $TITLE
+	fi
+
+}
+
+BG="%{B$COLOR_37}"
+FG="%{F$COLOR_30}"
+
+while true; do
+	LEFT="[ $(Date) ]"
+	CENTER="[ $(ActiveWindow) ]"
+	RIGHT="[ Vol: $(Volume) ] [ $(Time) ]"
+
+	echo "$BG$FG%{l} $LEFT %{c} $CENTER %{r} $RIGHT %{-F}"
+	sleep 0.25
+done

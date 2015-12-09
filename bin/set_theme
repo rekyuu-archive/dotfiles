@@ -1,0 +1,84 @@
+#!/bin/bash
+
+# Theme generation script
+
+source ~/.config/themerc
+
+# Sets the background
+feh --bg-fill $WALLPAPER
+
+# Sets the cursor
+xsetroot -cursor_name left_ptr
+
+# Sets terminal colors
+cat > ~/.Xcolors <<EOL
+! ~/.Xcolors
+! $THEME theme
+
+! General
+URxvt*font: xft:$FONT_MONO:size=$FONT_MONO_SIZE
+URxvt*background: $COLOR_30
+URxvt*foreground: $COLOR_37
+
+! Black
+URxvt*color0: $COLOR_30
+URxvt*color8: $COLOR_30_1
+
+! Red
+URxvt*color1: $COLOR_31
+URxvt*color9: $COLOR_31_1
+
+! Green
+URxvt*color2: $COLOR_32
+URxvt*color10: $COLOR_32_1
+
+! Yellow
+URxvt*color3: $COLOR_33
+URxvt*color11: $COLOR_33_1
+
+! Blue
+URxvt*color4: $COLOR_34
+URxvt*color12: $COLOR_34_1
+
+! Magenta
+URxvt*color5: $COLOR_35
+URxvt*color13: $COLOR_35_1
+
+! Cyan
+URxvt*color6: $COLOR_36
+URxvt*color14: $COLOR_36_1
+
+! White
+URxvt*color7: $COLOR_37
+URxvt*color15: $COLOR_37_1
+EOL
+
+# Creates dunst colors
+cat > ~/.config/dunst/dunstcolors <<EOL
+[frame]
+    width = 2
+    color = "$COLOR_37"
+
+[urgency_low]
+    # IMPORTANT: colors have to be defined in quotation marks.
+    # Otherwise the "#" and following would be interpreted as a comment.
+    background = "$COLOR_35"
+    foreground = "$COLOR_37"
+    timeout = 10
+
+[urgency_normal]
+    background = "$COLOR_30"
+    foreground = "$COLOR_37"
+    timeout = 10
+
+[urgency_critical]
+    background = "$COLOR_31"
+    foreground = "$COLOR_37"
+    timeout = 0
+
+[global]
+    font = $FONT_MONO $FONT_MONO_SIZE
+EOL
+
+cat ~/.config/dunst/dunstcolors ~/.config/dunst/dunstmain > \
+	~/.config/dunst/dunstrc

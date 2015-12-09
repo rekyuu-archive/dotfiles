@@ -1,0 +1,23 @@
+[frame]
+    width = 2
+    color = "#c3cbca"
+
+[urgency_low]
+    # IMPORTANT: colors have to be defined in quotation marks.
+    # Otherwise the "#" and following would be interpreted as a comment.
+    background = "#596567"
+    foreground = "#c3cbca"
+    timeout = 10
+
+[urgency_normal]
+    background = "#131619"
+    foreground = "#c3cbca"
+    timeout = 10
+
+[urgency_critical]
+    background = "#505050"
+    foreground = "#c3cbca"
+    timeout = 0
+
+[global]
+    font = Hack 11

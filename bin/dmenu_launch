@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# launches dmenu2 with theme colors
+
+source ~/.config/themerc
+
+dmenu_run -s 0 -h 20 \
+	-fn "$FONT_MONO-$FONT_MONO_SIZE" \
+	-nb $COLOR_30 \
+	-nf $COLOR_37 \
+	-sb $COLOR_35 \
+	-sf $COLOR_37

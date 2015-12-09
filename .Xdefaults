@@ -1,0 +1,31 @@
+! ~/.Xdefaults
+
+#include ".Xcolors"
+
+! Text
+URxvt*depth: 32
+URxvt*letterSpace: -1
+URxvt*skipBuiltinGlyphs: false
+URxvt*urgentOnBell: true
+URxvt*visualBell: true
+
+! Cursor
+URxvt*cursorBlink: true
+
+! Scrolling
+URxvt*scrollstyle: rxvt
+URxvt*scrollBar: false
+URxvt*scrollTtyOutput: false
+URxvt*scrollWithBuffer: true
+URxvt*scrollTtyKeypress: true
+
+! Window
+URxvt*internalBorder: 4
+
+! Extensions
+URxvt*perl-ext-common: default,matcher,clipboard,bell-command
+URxvt*url-launcher: /usr/bin/google-chrome-unstable
+URxvt*matcher.button: 1
+URxvt*keysym.Shift-Control-C: perl:clipboard:copy
+URxvt*keysym.Shift-Control-V: perl:clipboard:paste
+URxvt*bell-command: paplay ~/sfx/smrpg_1up.wav

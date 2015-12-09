@@ -1,0 +1,9 @@
+#!/bin/bash
+
+source ~/.config/themerc
+
+~/.config/lemonbar/bar_modules \
+	| lemonbar \
+		-f "$FONT_MONO:size=$FONT_MONO_SIZE" \
+		-g 1920x20+1600+0 \
+wait

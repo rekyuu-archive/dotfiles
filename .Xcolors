@@ -1,0 +1,39 @@
+! ~/.Xcolors
+! winter theme
+
+! General
+URxvt*font: xft:Hack:size=11
+URxvt*background: #131619
+URxvt*foreground: #c3cbca
+
+! Black
+URxvt*color0: #131619
+URxvt*color8: #131619
+
+! Red
+URxvt*color1: #505050
+URxvt*color9: #505050
+
+! Green
+URxvt*color2: #7c8888
+URxvt*color10: #7c8888
+
+! Yellow
+URxvt*color3: #9da7a6
+URxvt*color11: #9da7a6
+
+! Blue
+URxvt*color4: #22282c
+URxvt*color12: #22282c
+
+! Magenta
+URxvt*color5: #596567
+URxvt*color13: #596567
+
+! Cyan
+URxvt*color6: #a9bdc0
+URxvt*color14: #a9bdc0
+
+! White
+URxvt*color7: #c3cbca
+URxvt*color15: #c3cbca

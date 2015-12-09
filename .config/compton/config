@@ -1,0 +1,40 @@
+# Compton settings
+
+# Shadows
+shadow =					true;
+no-dock-shadow =			false;
+no-dnd-shadow =				true;
+clear-shadow =				true;
+shadow-radius =				5;
+shadow-offset-x =			-8;
+shadow-offset-y =			-8;
+shadow-opacity =			0.33;
+shadow-ignore-shaped =		false;
+shadow-exclude =			[
+	"class_i * =			'dmenu2'"
+];
+
+# Opacity
+menu-opacity =				1;
+inactive-opacity =			1;
+active-opacity =			1;
+frame-opacity =				1;
+alpha-step =				0.05;
+blur-background =			false;
+blur-background-fixed =		false;
+opacity-exclude=			[];
+
+# Fade
+fading =					true;
+fade-delta =				1;
+fade-in-step =				0.05;
+fade-out-step =				0.05;
+no-fading-openclose =		false;
+fade-exclude = 				[];
+
+# Vsync
+backend = 					"glx";
+glx-swap-method = 			1;
+
+# Window specific settings
+wintypes: {};

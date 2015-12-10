@@ -49,5 +49,6 @@ bspc rule -a "google-chrome-unstable"	desktop=^1
 bspc rule -a "mpv"						desktop=^1 floating=on center=on
 bspc rule -a "pavucontrol"				floating=on
 bspc rule -a "spacefm"					floating=on
+bspc rule -a "speedcrunch"				floating=on
 bspc rule -a "subl3"					desktop=^3
 bspc rule -a "telegram"					desktop=^3

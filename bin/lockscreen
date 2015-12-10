@@ -1,0 +1,13 @@
+#!/bin/bash
+
+## Lockscreen script
+#
+# -c background color
+# -i image location
+# -l default color
+# -w incorrect color
+# -o verified color
+
+source ~/.config/themerc
+
+i3lock -c $COLOR_32 -l $COLOR_37 -w $COLOR_31 -o $COLOR_36

@@ -66,6 +66,10 @@ Print
 shift + Print
 	screenshot region
 
+# lock the screen
+super + l
+	lockscreen
+
 # reloads everything
 super + Escape
 	pkill -USR1 -x sxhkd; \

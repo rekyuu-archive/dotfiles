@@ -65,6 +65,8 @@ Print
 	screenshot all
 shift + Print
 	screenshot region
+ctrl + Print
+	screenshot webm
 
 # lock the screen
 super + l

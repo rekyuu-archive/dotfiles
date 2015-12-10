@@ -14,6 +14,11 @@
 #
 # $ screenshot region
 #   for region selection
+#
+# $ screenshot webm
+#   for webm screen recording
+#   press `q` to stop the recording if ran from a terminal.
+#   otherwise, run the above command again to stop recording.
 
 # Defines the URLs to make the POST
 URL="http://kyo.li"
@@ -22,7 +27,11 @@ UPLOAD=$URL$API
 
 # Defines the folder and file names
 DIR=~/img/screenshots/$(date "+%Y-%m")
-FILENAME=$(date "+%Y-%m-%d_%H-%M-%S").png
+if [ "$1" == "webm" ]; then
+	FILENAME=$(date "+%Y-%m-%d_%H-%M-%S").webm
+else
+	FILENAME=$(date "+%Y-%m-%d_%H-%M-%S").png
+fi
 
 # Makes the directory if it doesn't exist
 mkdir -p $DIR
@@ -33,6 +42,16 @@ if [ "$1" == "all" ]; then
 	maim $FILEPATH
 elif [ "$1" == "region" ]; then
 	maim -s $FILEPATH -c 1,0,0,1 -p 5 -b 1
+elif [ "$1" == "webm" ]; then
+	# Checks if ffmpeg is running, terminates it if it is.
+	# Otherwise, starts the recording.
+
+	if [ "$(pidof ffmpeg)" ]; then
+		kill -SIGTERM $(pidof ffmpeg)
+	else
+		eval $(slop -c 1,0,0,1 -p 5 -b 1)
+		ffmpeg -f x11grab -s "$W"x"$H" -i :0.0+$X,$Y -f pulse -i default $FILEPATH
+	fi
 fi
 
 if [ -e $FILEPATH ]; then

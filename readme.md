@@ -4,4 +4,4 @@ yaya
 
 ## Winter Theme
 
-![](http://kyo.li/i/kgyz.png)
+![](http://kyo.li/i/hfnn.png)

@@ -14,7 +14,7 @@ bspc config urgent_border_color			$COLOR_37
 bspc config presel_border_color			$COLOR_37
 
 # General settings
-bspc config 							0.33
+bspc config split_ratio					1
 bspc config borderless_monocle			false
 bspc config gapless_monocle				false
 bspc config focus_follows_pointer		false
@@ -45,7 +45,8 @@ bspc monitor DVI-I-1 -d 2
 bspc monitor DP-0    -d 3
 
 # Window rules
-bspc rule -a "google-chrome-unstable"	desktop=^1
+bspc rule -a "google-chrome-unstable (/home/bowan/.config/google-chrome-unstable)" 							desktop=^1 floating=off fullscreen=off
+bspc rule -a "google-chrome-unstable" 	desktop=^1 floating=on fullscreen=off
 bspc rule -a "mpv"						desktop=^1 floating=on center=on
 bspc rule -a "pavucontrol"				floating=on
 bspc rule -a "spacefm"					floating=on

@@ -26,25 +26,45 @@ alt + space
 alt + {_,shift + }Tab
 	bspc window -f {prev,next}
 
-# defines a preselect
-super + {Up,Down,Left,Right}
-	bspc window --presel {up,down,left,right}
+# moves current window to another workspace
+super + shift + {Left,Right}
+	ACTIVE_WINDOW=$(bspc query -W -w focused); \
+	CURRENT=$(bspc query -D -d focused); \
+	ATTEMPTED=$(expr $CURRENT {-,+} 1); \
+	if [ "$ATTEMPTED" -ge 4 ]; then \
+		DESKTOP=1; \
+	elif [ "$ATTEMPTED" -le 0 ]; then \
+		DESKTOP=3; \
+	else \
+		DESKTOP=$ATTEMPTED; \
+	fi; \
+	bspc window -d $DESKTOP; \
+	bspc desktop -f $DESKTOP; \
+	bspc window -f $ACTIVE_WINDOW
 
-# moves around windows
-alt + shift + {Up,Down,Left,Right}
+# moves windows
+super + {Up,Down,Left,Right}
 	bspc window -s {up,down,left,right}
 
-# resizes by 10px
-super + shift + {Up,Down,Left,Right}
-	bspc window -e {up +10,up -10,right -10,right +10}
-super + alt + {Up,Down,Left,Right}
-	bspc window -e {down +10,down -10,left -10,left +10}
+# preselects windows
+super + {j,k,h,l}
+	bspc window -p {up,down,left,right}
+
+# balances, circulates, equalizes, flips, or rotates active desktop
+super + {b,c,e,f,r}
+	bspc desktop -{B,C forward,E,F vertical,R 90}
+
+# ratios
+super + {1,2,3}
+	bspc window -e right {0.25,0.33,0.50}
+super + {4,5,6}
+	bspc window -e left {0.25,0.33,0.50}
 
 # mouse movement and resizing
 ~button1
 	bspc pointer -g focus
 alt + button{1-3}
-	bspc pointer -g {move,resize_side,resize_corner}
+	bspc pointer -g {move,resize_corner,resize_side}
 alt + !button{1-3}
 	bspc pointer -t %i %i
 alt + @button{1-3}
@@ -67,6 +87,10 @@ shift + Print
 	screenshot region
 ctrl + Print
 	screenshot webm
+
+# launches a terminal
+super + grave
+	urxvt
 
 # lock the screen
 super + l

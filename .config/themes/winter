@@ -2,11 +2,7 @@
 
 # winter theme
 
-# Fonts
-FONT_MAIN="Koruri"
-FONT_MAIN_SIZE="14"
-FONT_MONO="Hack"
-FONT_MONO_SIZE="11"
+source ~/.config/themes/fonts
 
 # Black
 COLOR_30="#131619"

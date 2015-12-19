@@ -1,0 +1,70 @@
+#!/bin/bash
+
+## make_theme
+#
+# Generates a theme based on an image.
+#
+# requirements:
+#   golang
+#   schemer2
+#
+#	make sure you've set up your gopaths properly.
+#	go get github.com/thefryscorer/schemer2
+#
+# $ make_theme /home/user/exact/path/to/image theme_name
+#   creates a theme
+#
+GOPATH=~/dev/go
+
+IMAGE=$1
+THEME_NAME=$2
+THEME_DIR=~/.config/themes
+THEMERC=~/.config/themerc
+COLORS_TMP=$THEME_DIR/colors.tmp
+
+# Generates a basic colors file based on the image.
+$GOPATH/bin/schemer2 -format img::colors -in $IMAGE -out $COLORS_TMP
+
+# Adds fonts to the theme file.
+cat > $THEME_DIR/$THEME_NAME <<EOL
+#!/bin/bash
+
+# $THEME_NAME theme
+
+source ~/.config/themes/fonts
+
+EOL
+
+# Adds colors to the theme file.
+hue=0
+head -8 $COLORS_TMP |
+while read color; do
+	echo "COLOR_3$hue=\"$color\"" >> $THEME_DIR/$THEME_NAME
+	echo "COLOR_3${hue}_1=\"$color\"" >> $THEME_DIR/$THEME_NAME
+	let hue++
+done
+
+# Adds the wallpaper to the theme file.
+cat >> $THEME_DIR/$THEME_NAME <<EOL
+
+# Background
+WALLPAPER="$IMAGE"
+EOL
+
+# Removes the generated colors file.
+rm $COLORS_TMP
+
+# Sets the theme.
+cat > ~/.config/themerc <<EOL
+#!/bin/bash
+
+# main theme file
+#
+# Rename the line below to the theme you'd like to use, located in
+# `~/.config/themes`.
+
+THEME="$THEME_NAME"
+
+# Pulls from the main theme file
+source ~/.config/themes/\$THEME
+EOL

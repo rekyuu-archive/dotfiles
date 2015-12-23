@@ -263,7 +263,7 @@ song_window_title_format = {%t}{ - %b}{ - %a}|{%f}
 ##   not available.
 ##
 
-song_columns_list_format = (2f)[yellow]{} (34)[white]{t|f} (66)[cyan]{b} (6f)[yellow]{lr}
+song_columns_list_format = (2f)[yellow]{} (40)[white]{t|f} (60)[cyan]{b} (6f)[yellow]{lr}
 
 ##### various settings #####
 

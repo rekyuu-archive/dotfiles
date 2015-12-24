@@ -16,7 +16,7 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin
 export GOPATH="/home/bowan/dev/go"
 
 # Aliases
-alias ls='ls --color=auto -Aghl'
+alias ls='ls -Ahl --color=auto --group-directories-first'
 
 # Prompt customization
 autoload -U colors && colors
@@ -31,5 +31,5 @@ function get_git {
 
 # [user@host directory] (git branch)
 # $ prompt
-PROMPT="[%{$fg_bold[cyan]%}%n@%{$fg[cyan]%}%m %{$fg_bold[white]%}%1~%b] %B$(get_git)%b
+PROMPT="[%B%{$fg[cyan]%}%n%b@%{$fg[cyan]%}%m %B%{$fg[white]%}%1~%b] %B$(get_git)%b
 $ "

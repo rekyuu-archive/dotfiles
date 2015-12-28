@@ -1,6 +1,7 @@
 # Folders
 .TelegramDesktop/
 .cache/
+.cargo/
 .codeintel/
 .gnome/
 .gnupg/
@@ -17,11 +18,13 @@ img/
 sfx/
 
 # ~/.config specific directories or folders
+.config/.mono/
 .config/dconf/
 .config/gconf/
 .config/google-chrome/
 .config/google-chrome-unstable/
 .config/htop/
+.config/KeePass/
 .config/menus/
 .config/mpd/db
 .config/mpd/log

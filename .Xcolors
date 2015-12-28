@@ -1,39 +1,39 @@
 ! ~/.Xcolors
-! winter theme
+! kyousougiga theme
 
 ! General
 URxvt*font: xft:Hack:size=11
-URxvt*background: #131619
-URxvt*foreground: #c3cbca
+URxvt*background: #0F151D
+URxvt*foreground: #EEE6E3
 
 ! Black
-URxvt*color0: #131619
-URxvt*color8: #131619
+URxvt*color0: #0F151D
+URxvt*color8: #252C34
 
 ! Red
-URxvt*color1: #505050
-URxvt*color9: #505050
+URxvt*color1: #C43F44
+URxvt*color9: #FCBAC4
 
 ! Green
-URxvt*color2: #7c8888
-URxvt*color10: #7c8888
+URxvt*color2: #77C052
+URxvt*color10: #77C052
 
 ! Yellow
-URxvt*color3: #9da7a6
-URxvt*color11: #9da7a6
+URxvt*color3: #F8CC4F
+URxvt*color11: #FC8C2C
 
 ! Blue
-URxvt*color4: #22282c
-URxvt*color12: #22282c
+URxvt*color4: #1B4C9B
+URxvt*color12: #3175E3
 
 ! Magenta
-URxvt*color5: #596567
-URxvt*color13: #596567
+URxvt*color5: #40388E
+URxvt*color13: #4F4FBF
 
 ! Cyan
-URxvt*color6: #a9bdc0
-URxvt*color14: #a9bdc0
+URxvt*color6: #37B4D2
+URxvt*color14: #98DEF7
 
 ! White
-URxvt*color7: #c3cbca
-URxvt*color15: #c3cbca
+URxvt*color7: #EEE6E3
+URxvt*color15: #FDF8F5

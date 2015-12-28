@@ -78,17 +78,18 @@ visualizer_sample_multiplier = 1
 ## Keep in mind that sane values start with >=10.
 ##
 
-visualizer_sync_interval = 15
+visualizer_sync_interval = 30
 
 ##
 ## Note: To enable spectrum frequency visualization
 ## you need to compile ncmpcpp with fftw3 support.
 ##
-## Available values: spectrum, wave.
+## Available values: spectrum, wave, wave_filled, ellipse.
 ##
 
-visualizer_type = spectrum
-visualizer_look = ●▉
+visualizer_type = wave
+visualizer_look = ▖▉
+visualizer_color = magenta, blue, cyan, green, yellow, red
 
 ##### system encoding #####
 ##
@@ -263,7 +264,7 @@ song_window_title_format = {%t}{ - %b}{ - %a}|{%f}
 ##   not available.
 ##
 
-song_columns_list_format = (2f)[yellow]{} (40)[white]{t|f} (60)[cyan]{b} (6f)[yellow]{lr}
+song_columns_list_format = (2f)[white]{} (50)[red]{t|f} (30)[yellow]{b} (20)[green]{a} (6f)[cyan]{lr}
 
 ##### various settings #####
 
@@ -300,8 +301,8 @@ centered_cursor = no
 ## be used to build 'empty' part of progressbar.
 ##
 
-progressbar_look = ══
-progressbar_boldness = yes
+progressbar_look = ▄▄
+progressbar_boldness = no
 
 ## Available values: database, playlist.
 
@@ -433,15 +434,14 @@ header_window_color = default
 volume_color = default
 state_line_color = default
 state_flags_color = default
-main_window_color = yellow
+main_window_color = default
 color1 = white
 color2 = green
 main_window_highlight_color = yellow
 progressbar_color = black
-progressbar_elapsed_color = green
+progressbar_elapsed_color = default
 statusbar_color = default
 alternative_ui_separator_color = black
 active_column_color = red
-visualizer_color = magenta
 window_border_color = green
 active_window_border = red

@@ -5,4 +5,7 @@ compton --config ~/.config/compton/config &
 [[ -z $(pgrep -xU $UID mpdscribble) ]] && mpdscribble &
 redshift &
 sxhkd &
+google-chrome-unstable &
+subl3 &
+telegram &
 exec bspwm

@@ -46,10 +46,12 @@ bspc monitor DP-0    -d 3
 
 # Window rules
 bspc rule -a "deluge"					floating=on
+bspc rule -a "feh"						desktop=^3 floating=on center=on
 bspc rule -a "google-chrome-unstable (/home/bowan/.config/google-chrome-unstable)" 							desktop=^1 floating=off fullscreen=off
 bspc rule -a "google-chrome-unstable" 	desktop=^1 floating=on fullscreen=off
 bspc rule -a "mpv"						desktop=^1 floating=on center=on
 bspc rule -a "pavucontrol"				floating=on
+bspc rule -a "explorer.exe"				desktop=^1 floating=on center=on
 bspc rule -a "spacefm"					floating=on
 bspc rule -a "speedcrunch"				floating=on
 bspc rule -a "subl3"					desktop=^3

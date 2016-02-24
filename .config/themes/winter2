@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# winter2 theme
+
+source ~/.config/themes/fonts
+
+COLOR_30="#232831"
+COLOR_30_1="#232831"
+COLOR_31="#747c8f"
+COLOR_31_1="#747c8f"
+COLOR_32="#000416"
+COLOR_32_1="#000416"
+COLOR_33="#693943"
+COLOR_33_1="#693943"
+COLOR_34="#474d59"
+COLOR_34_1="#474d59"
+COLOR_35="#383c46"
+COLOR_35_1="#383c46"
+COLOR_36="#8e99ad"
+COLOR_36_1="#8e99ad"
+COLOR_37="#535f73"
+COLOR_37_1="#535f73"
+
+# Background
+WALLPAPER="/home/bowan/img/wallpapers/winter2.jpg"

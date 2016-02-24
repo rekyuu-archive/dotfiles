@@ -301,6 +301,7 @@ centered_cursor = no
 ## be used to build 'empty' part of progressbar.
 ##
 
+#progressbar_look = ██░
 progressbar_look = ▄▄
 progressbar_boldness = no
 
@@ -328,7 +329,7 @@ header_visibility = no
 statusbar_visibility = no
 titles_visibility = no
 header_text_scrolling = yes
-cyclic_scrolling = no
+cyclic_scrolling = yes
 lines_scrolled = 2
 follow_now_playing_lyrics = no
 fetch_lyrics_for_current_song_in_background = no
@@ -363,7 +364,7 @@ show_hidden_files_in_local_browser = no
 ## media_library, playlist_editor, tag_editor, outputs, visualizer, clock.
 ##
 
-screen_switcher_mode = playlist, browser, visualizer
+screen_switcher_mode = playlist, playlist_editor, browser, visualizer
 
 ##
 ## Note: You can define startup screen for ncmpcpp

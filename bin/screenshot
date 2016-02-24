@@ -21,27 +21,25 @@
 #   otherwise, run the above command again to stop recording.
 
 # Defines the URLs to make the POST
-URL="http://kyo.li"
+URL="https://kyo.li"
 API="/api/upload"
 UPLOAD=$URL$API
 
 # Defines the folder and file names
 DIR=~/img/screenshots/$(date "+%Y-%m")
-if [ "$1" == "webm" ]; then
-	FILENAME=$(date "+%Y-%m-%d_%H-%M-%S").webm
-else
-	FILENAME=$(date "+%Y-%m-%d_%H-%M-%S").png
-fi
+FILENAME=$(date "+%Y-%m-%d_%H-%M-%S")
 
 # Makes the directory if it doesn't exist
 mkdir -p $DIR
-FILEPATH=$DIR/$FILENAME
 
 # Runs maim depending on the script argument
 if [ "$1" == "all" ]; then
+	FILEPATH=$DIR/$FILENAME.png
 	maim $FILEPATH
 elif [ "$1" == "region" ]; then
-	maim -s $FILEPATH -c 1,0,0,1 -p 5 -b 1
+	FILEPATH=$DIR/$FILENAME.png
+	maim -s $FILEPATH -c 1,0,0,1 -b 1
+#	maim -s $FILEPATH -c 1,0,0,1 -b 1 --opengl
 #	maim ~/tmp.png
 #
 #	feh ~/tmp.png -g 5120x1080 &
@@ -53,12 +51,43 @@ elif [ "$1" == "region" ]; then
 elif [ "$1" == "webm" ]; then
 	# Checks if ffmpeg is running, terminates it if it is.
 	# Otherwise, starts the recording.
+	FILEPATH=$DIR/$FILENAME.webm
 
 	if [ "$(pidof ffmpeg)" ]; then
 		kill -SIGTERM $(pidof ffmpeg)
 	else
-		eval $(slop -c 1,0,0,1 -p 5 -b 1)
-		ffmpeg -f x11grab -s "$W"x"$H" -i :0.0+$X,$Y -f pulse -i default $FILEPATH
+		# Records lossless video
+		eval $(slop -c 1,0,0,1 -b 1)
+#		eval $(slop -c 1,0,0,1 -b 1 --opengl)
+		ffmpeg \
+			-s "$W"x"$H" \
+			-framerate 60 \
+			-f x11grab \
+			-i :0.0+$X,$Y \
+			-f pulse \
+			-ac 2 \
+			-i default \
+			-c:v libx264 \
+			-qp 0 \
+			-preset ultrafast \
+			~/tmp.mkv
+
+		# Converts to webm
+		notify-send "Converting..."
+		paplay ~/sfx/smrpg_flower.wav
+
+		ffmpeg \
+			-r 60 \
+			-i ~/tmp.mkv \
+			-c:v libvpx \
+			-r 60 \
+			-crf 4 \
+			-b:v 15M \
+			-c:a libvorbis \
+			$FILEPATH
+
+		# Removes the old file
+		rm ~/tmp.mkv
 	fi
 fi
 

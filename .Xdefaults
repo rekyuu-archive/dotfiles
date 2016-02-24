@@ -4,7 +4,8 @@
 
 ! Text
 URxvt*depth: 32
-URxvt*letterSpace: -1
+URxvt*letterSpace: -2
+URxvt*lineSpace: 2
 URxvt*skipBuiltinGlyphs: false
 URxvt*urgentOnBell: true
 URxvt*visualBell: true
@@ -20,7 +21,7 @@ URxvt*scrollWithBuffer: true
 URxvt*scrollTtyKeypress: true
 
 ! Window
-URxvt*internalBorder: 4
+URxvt*internalBorder: 12
 
 ! Extensions
 URxvt*perl-ext-common: default,matcher,clipboard,bell-command

@@ -17,19 +17,19 @@ export GOPATH="/home/bowan/dev/go"
 
 # Aliases
 alias ls='ls -Ahl --color=auto --group-directories-first'
+alias py='python'
 
 # Prompt customization
 autoload -U colors && colors
+autoload -Uz vcs_info
+setopt prompt_subst
 
-function git_changes {
-	[[ $(git status 2> /dev/null | tail -n1) != "no changes added to commit (use \"git add\" and/or \"git commit -a\")" ]] && echo "*"
-}
+zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' actionformats "%B%F{2}%u%f %B%b%f"
+zstyle ':vcs_info:*' formats "%B%F{2}%u%f %B%b%f"
 
-function get_git {
-	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/(\1$(git_changes))/"
-}
+precmd() { vcs_info }
 
-# [user@host directory] (git branch)
-# $ prompt
-PROMPT="[%B%{$fg[cyan]%}%n%b@%{$fg[cyan]%}%m %B%{$fg[white]%}%1~%b] %B$(get_git)%b
-$ "
+PROMPT="%{$fg[cyan]%}%B%2~%b %B»%b "
+RPROMPT='${vcs_info_msg_0_}'

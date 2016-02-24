@@ -1,3 +1,4 @@
+shellinaboxd --user-css Normal:+/home/bowan/.config/shellinabox/white-on-black.css -t -b &
 bar &
 set_theme &
 compton --config ~/.config/compton/config &

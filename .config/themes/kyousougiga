@@ -6,11 +6,11 @@ source ~/.config/themes/fonts
 
 # Black
 COLOR_30="#0F151D"
-COLOR_30_1="#252C34"
+COLOR_30_1="#273A4D"
 
 # Red
 COLOR_31="#C43F44"
-COLOR_31_1="#FCBAC4"
+COLOR_31_1="#C43F44"
 
 # Green
 COLOR_32="#77C052"
@@ -18,7 +18,7 @@ COLOR_32_1="#77C052"
 
 # Yellow
 COLOR_33="#F8CC4F"
-COLOR_33_1="#FC8C2C"
+COLOR_33_1="#F8CC4F"
 
 # Blue
 COLOR_34="#1B4C9B"

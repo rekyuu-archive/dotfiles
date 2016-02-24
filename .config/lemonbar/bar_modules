@@ -46,6 +46,6 @@ while true; do
 	CENTER="[ $(ActiveWindow) ]"
 	RIGHT="[ Vol: $(Volume) ] [ $(Time) ]"
 
-	echo "$BG$FG%{l} $LEFT %{c} $CENTER %{r} $RIGHT %{-F}"
+	echo "$BG$FG%{l} $LEFT %{c} $CENTER %{r} $RIGHT"
 	sleep 0.25
 done

@@ -16,6 +16,29 @@ dev/
 downloads/
 img/
 sfx/
+.hex/
+.kde4/
+.mix/
+.mono/
+.mozilla/
+.node-gyp/
+.npm/
+.npmrc
+.old/
+.python-eggs/
+.trackma/
+.vagrant.d/
+.vim/
+.win32/
+.wine/
+.ncmpcpp/lyrics/
+Downloads/
+VirtualBox VMs/
+backup/
+docs/
+files/
+keepass/
+stuff/
 
 # ~/.config specific directories or folders
 .config/.mono/
@@ -47,15 +70,25 @@ sfx/
 .config/sublime-text-3/Packages/User/Package Control.last-run
 .config/sublime-text-3/Packages/User/Package Control.merged-ca-bundle
 .config/sublime-text-3/Packages/User/Package Control.user-ca-bundle
+.config/sublime-text-3/Packages/Color Scheme - Kyousougiga/
 .config/sublime-text-3/Packages/bz2/
 .config/sublime-text-3/Packages/pygments/
 .config/sublime-text-3/Packages/pyyaml/
 .config/sublime-text-3/Packages/ssl-linux/
-.config/mimeapps.list
-.config/pavucontrol.ini
+.config/QtProject.conf
+.config/SpeedCrunch/
+.config/Syncplay/
+.config/Trolltech.conf
+.config/VirtualBox/
+.config/configstore/
+.config/deluge/
+.config/keepassc/
+.config/mirage/
+.config/shellinabox/
+.config/sublime-text-3/Backup/
+.config/viewnior/
 
 # Files
-.ncmpcpp/lyrics/
 .ncmpcpp/error.log
 .Xauthority
 .bash_history
@@ -65,3 +98,29 @@ sfx/
 .lesshst
 .gitconfig
 .xsel.log
+.gtk-bookmarks
+.histfile
+.kpcli-history
+.psql_history
+.python_history
+.recently-used
+.rnd
+.syncplay
+.v8flags.4.6.85.31.bowan.json
+.zcompdump
+TEMP
+.config/gtk-3.0/bookmarks
+bin/cryptgen
+bin/feh_browse
+bin/lecertgen
+bin/photoshop
+bin/pipes
+bin/pipesx
+bin/snow
+bin/vagrant_libvirt
+.config/mimeapps.list
+.config/pavucontrol.ini
+blocks
+certificate.pem
+dev
+.config/gtk-2.0/gtkfilechooser.ini

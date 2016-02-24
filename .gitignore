@@ -123,3 +123,4 @@ bin/vagrant_libvirt
 blocks
 certificate.pem
 dev
+.config/nvim/bundle/

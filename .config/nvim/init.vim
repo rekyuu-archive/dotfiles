@@ -26,3 +26,7 @@ autocmd vimenter * NERDTree
 " Cosmetic
 syntax on
 set number
+set cursorline
+let g:rehash256 = 1
+colors molokai
+set background=dark

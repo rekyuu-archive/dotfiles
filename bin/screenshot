@@ -38,8 +38,8 @@ if [ "$1" == "all" ]; then
 	maim $FILEPATH
 elif [ "$1" == "region" ]; then
 	FILEPATH=$DIR/$FILENAME.png
-	maim -s $FILEPATH -c 1,0,0,1 -b 1
-#	maim -s $FILEPATH -c 1,0,0,1 -b 1 --opengl
+#	maim -s $FILEPATH -c 1,0,0,1 -b 1
+maim -s $FILEPATH -c 1,0,0,1 -b 1 --opengl
 #	maim ~/tmp.png
 #
 #	feh ~/tmp.png -g 5120x1080 &
@@ -57,8 +57,8 @@ elif [ "$1" == "webm" ]; then
 		kill -SIGTERM $(pidof ffmpeg)
 	else
 		# Records lossless video
-		eval $(slop -c 1,0,0,1 -b 1)
-#		eval $(slop -c 1,0,0,1 -b 1 --opengl)
+#		eval $(slop -c 1,0,0,1 -b 1)
+ 		eval $(slop -c 1,0,0,1 -b 1 --opengl)
 		ffmpeg \
 			-s "$W"x"$H" \
 			-framerate 60 \

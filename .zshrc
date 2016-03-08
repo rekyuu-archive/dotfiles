@@ -26,8 +26,8 @@ setopt prompt_subst
 
 zstyle ':vcs_info:*' enable git svn
 zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' actionformats "%B%F{2}%u%f %B%b%f"
-zstyle ':vcs_info:*' formats "%B%F{2}%u%f %B%b%f"
+zstyle ':vcs_info:*' actionformats "%B%F{green}%c%u%f %B%b%f"
+zstyle ':vcs_info:*' formats "%B%F{green}%c%u%f %B%b%f"
 
 precmd() { vcs_info }
 

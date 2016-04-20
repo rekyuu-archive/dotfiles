@@ -1,26 +1,26 @@
 [frame]
     width = 2
-    color = "#EEE6E3"
+    color = "#e8e8e8"
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#40388E"
-    foreground = "#EEE6E3"
+    background = "#ba8baf"
+    foreground = "#e8e8e8"
     timeout = 10
 
 [urgency_normal]
-    background = "#0F151D"
-    foreground = "#EEE6E3"
+    background = "#181818"
+    foreground = "#e8e8e8"
     timeout = 10
 
 [urgency_critical]
-    background = "#C43F44"
-    foreground = "#EEE6E3"
+    background = "#ab4642"
+    foreground = "#e8e8e8"
     timeout = 0
 
 [global]
-    font = Hack 11
+    font = Dina 10
 
     # Allow a small subset of html markup:
     #   <b>bold</b>

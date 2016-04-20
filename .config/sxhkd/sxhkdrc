@@ -90,7 +90,7 @@ ctrl + Print
 
 # launches a terminal
 super + grave
-	urxvt
+	termite
 
 # lock the screen
 super + l

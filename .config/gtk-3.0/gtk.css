@@ -4,7 +4,11 @@
   margin: 0;
   border-radius: 0;
 }
-    
+
 .titlebar {
   border-radius: 0;
+}
+
+VteTerminal, vte-terminal {
+  padding: 10px;
 }

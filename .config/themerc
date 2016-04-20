@@ -5,7 +5,7 @@
 # Rename the line below to the theme you'd like to use, located in
 # .
 
-THEME="kyousougiga"
+THEME="hyouka"
 
 # Pulls from the main theme file
 source ~/.config/themes/$THEME

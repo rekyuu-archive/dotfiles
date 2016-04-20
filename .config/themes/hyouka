@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# winter theme
+
+source ~/.config/themes/fonts
+
+# Black
+COLOR_30="#181818"
+COLOR_30_1="#383838"
+
+# Red
+COLOR_31="#ab4642"
+COLOR_31_1="#ab4642"
+
+# Green
+COLOR_32="#a1b56c"
+COLOR_32_1="#a1b56c"
+
+# Yellow
+COLOR_33="#f7ca88"
+COLOR_33_1="#f7ca88"
+
+# Blue
+COLOR_34="#7cafc2"
+COLOR_34_1="#7cafc2"
+
+# Magenta
+COLOR_35="#ba8baf"
+COLOR_35_1="#ba8baf"
+
+# Cyan
+COLOR_36="#86c1b9"
+COLOR_36_1="#86c1b9"
+
+# White
+COLOR_37="#e8e8e8"
+COLOR_37_1="#f8f8f8"
+
+# Background
+WALLPAPER="/home/bowan/img/wallpapers/1417660114549.jpg"

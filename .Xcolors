@@ -1,39 +1,39 @@
 ! ~/.Xcolors
-! kyousougiga theme
+! hyouka theme
 
 ! General
-URxvt*font: xft:Hack:size=11
-URxvt*background: #0F151D
-URxvt*foreground: #EEE6E3
+URxvt*font: xft:Dina:size=10
+URxvt*background: #181818
+URxvt*foreground: #e8e8e8
 
 ! Black
-URxvt*color0: #0F151D
-URxvt*color8: #273A4D
+URxvt*color0: #181818
+URxvt*color8: #383838
 
 ! Red
-URxvt*color1: #C43F44
-URxvt*color9: #C43F44
+URxvt*color1: #ab4642
+URxvt*color9: #ab4642
 
 ! Green
-URxvt*color2: #77C052
-URxvt*color10: #77C052
+URxvt*color2: #a1b56c
+URxvt*color10: #a1b56c
 
 ! Yellow
-URxvt*color3: #F8CC4F
-URxvt*color11: #F8CC4F
+URxvt*color3: #f7ca88
+URxvt*color11: #f7ca88
 
 ! Blue
-URxvt*color4: #1B4C9B
-URxvt*color12: #3175E3
+URxvt*color4: #7cafc2
+URxvt*color12: #7cafc2
 
 ! Magenta
-URxvt*color5: #40388E
-URxvt*color13: #4F4FBF
+URxvt*color5: #ba8baf
+URxvt*color13: #ba8baf
 
 ! Cyan
-URxvt*color6: #37B4D2
-URxvt*color14: #98DEF7
+URxvt*color6: #86c1b9
+URxvt*color14: #86c1b9
 
 ! White
-URxvt*color7: #EEE6E3
-URxvt*color15: #FDF8F5
+URxvt*color7: #e8e8e8
+URxvt*color15: #f8f8f8

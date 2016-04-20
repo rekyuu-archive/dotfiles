@@ -10,7 +10,59 @@ feh --bg-fill $WALLPAPER
 # Sets the cursor
 xsetroot -cursor_name left_ptr
 
-# Sets terminal colors
+# Sets termite terminal colors
+cat > ~/.config/termite/config <<EOL
+[options]
+font =              $FONT_MONO $FONT_MONO_SIZE
+allow_bold =        true
+audible_bell =      true
+visible_bell =      true
+browser =           google-chrome-unstable
+clickable_url =     true
+scrollback_lines =  10000
+search_wrap =       true
+cursor_blink =      system
+cursor_shape =      ibeam
+
+[colors]
+cursor =        $COLOR_37
+foreground =    $COLOR_37
+background =    $COLOR_30
+
+# black
+color0 =        $COLOR_30
+color8 =        $COLOR_30_1
+
+# red
+color1 =        $COLOR_31
+color9 =        $COLOR_31_1
+
+# green
+color2 =        $COLOR_32
+color10 =       $COLOR_32_1
+
+# yellow
+color3 =        $COLOR_33
+color11 =       $COLOR_33_1
+
+# blue
+color4 =        $COLOR_34
+color12 =       $COLOR_34_1
+
+# magenta
+color5 =        $COLOR_35
+color13 =       $COLOR_35_1
+
+# cyan
+color6 =        $COLOR_36
+color14 =       $COLOR_36_1
+
+# white
+color7 =        $COLOR_37
+color15 =       $COLOR_37_1
+EOL
+
+# Sets urxvt terminal colors
 cat > ~/.Xcolors <<EOL
 ! ~/.Xcolors
 ! $THEME theme
